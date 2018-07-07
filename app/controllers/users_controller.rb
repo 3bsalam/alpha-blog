@@ -24,6 +24,9 @@ class UsersController < ApplicationController
         flash[:success]="Your account was updated succcessfully"
         redirect_to articles_path
     end
+    end
+  def show
+    @user = User.find(params[:id])
   end
   private
   def user_params
